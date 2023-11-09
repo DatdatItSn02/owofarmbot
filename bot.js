@@ -321,6 +321,12 @@ request.get(
             sleepy("Main", "CheckList");
 
             setTimeout(() => {
+                if (settings.buyring == "true")
+                {
+                    setTimeout(() => {
+                        buy_ring(maintoken, "Main Token", mainchannelid);
+                    }, 3000);
+                }
                 if (settings.huntandbattle == "true") {
                     setTimeout(() => {
                         hunt(maintoken, "StartUp", "Main Token", mainchannelid);
@@ -396,6 +402,13 @@ if (extratokencheck == "true") {
                             sleepy("Extra", "CheckList");
                         }, 5000);
                     }, 3500);
+
+                    if (settings.buyring == "true")
+                    {
+                        setTimeout(() => {
+                            buy_ring(maintoken, "StartUp", "Main Token", mainchannelid);
+                        }, 3000);
+                    }
                     if (settings.huntandbattle == "true") {
                         setTimeout(() => {
                             hunt(
@@ -451,6 +464,15 @@ if (extratokencheck == "true") {
     );
 } else {
     global.etoken = false;
+}
+//-----------------------------BUY RING-------------------------------------------------------//
+if (settings.buyring == "true") {
+    setInterval(() => {
+        buy_ring(maintoken, "Main Token", mainchannelid);
+        if (global.etoken) {
+            buy_ring(extratoken, "Extra Token", extrachannelid);
+        }
+    }, 3000);
 }
 //--------------------------HUNT BATTLE-------------------------------------------------------//
 setInterval(() => {
@@ -708,6 +730,41 @@ async function updateerrorsocket(eyl) {
     }, 3100);
 }
 //----------------------------------------------------Main Features----------------------------------------------------//
+/**
+ * Sends a message to a Discord channel to buy ring.
+ * @param {string} token - The Discord bot token.
+ * @param {string} tokentype - The type of token being used.
+ * @param {string} channelid - The ID of the Discord channel to send the message to.
+ */
+function buy_ring(token, tokentype, channelid) {
+    request.post(
+        {
+            headers: {
+                authorization: token,
+            },
+            url:
+                "https://discord.com/api/v9/channels/" +
+                channelid +
+                "/messages",
+            json: {
+                content: "owo buy 1",
+                nonce: nonce(),
+                tts: false,
+                flags: 0,
+            },
+        },
+        function (error, response, body) {
+            console.log(
+                chalk.red(
+                    `${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+                ) +
+                    chalk.magenta(" [" + tokentype + "]") +
+                    chalk.blue(" Buy Ring 💍 ✅")
+            );
+        }
+    );
+}
+
 /**
  * Sends a message to a Discord channel to initiate a hunt.
  * @param {string} token - The Discord bot token.

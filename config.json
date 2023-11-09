@@ -1,11 +1,12 @@
 {
     "settings": {
+        "buyring" : "true",
         "huntandbattle": "true",
         "banbypass": "true",
-        "discordrpc": "false",
+        "discordrpc": "true",
         "pray": "false",
-        "curse": "false",
-        "autoquest": "false",
+        "curse": "true",
+        "autoquest": "true",
         "extratoken": "false",
         "inventory": {
             "inventorycheck": "true",
@@ -19,10 +20,10 @@
             "enable": "false",
             "type": "sacrifice",
             "animaltype": {
-                "common": "true",
-                "uncommon": "true",
-                "rare": "true",
-                "epic": "true",
+                "common": "false",
+                "uncommon": "false",
+                "rare": "false",
+                "epic": "false",
                 "mythical": "false",
                 "patreon": "false",
                 "cpatreon": "false",
@@ -41,25 +42,25 @@
         },
         "gamble": {
             "coinflip": {
-                "default_amount": 1000,
+                "default_amount": 50000,
                 "max_amount": 150000,
                 "multipler": 3,
                 "enable": "true", 
                 "amount": "1"
             },
             "slots": {
-                "enable": "false",
-                "amount": "1"
+                "enable": "true",
+                "amount": "25000"
             }
         }
     },
     "main": {
-        "token": "",
-        "userid": "",
-        "channelid": "",
-        "owodmchannelid": "",
-        "gamblechannelid":"",
-        "autoquestchannelid": ""
+        "token": "NzgxNTE5MjU3MzI5NDY3NDEz.GkscIV.edu6A31puiC15pQMygqeme7RBDwm_HfFS9au_I",
+        "userid": "781519257329467413",
+        "channelid": "687321586986123368",
+        "owodmchannelid": "828183841402650644",
+        "gamblechannelid":"687321586986123368",
+        "autoquestchannelid": "687321586986123368"
     },
     "extra": {
         "token": "",
