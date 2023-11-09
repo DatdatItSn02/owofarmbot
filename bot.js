@@ -325,7 +325,7 @@ request.get(
                 {
                     setTimeout(() => {
                         buy_ring(maintoken, "Main Token", mainchannelid);
-                    }, 3000);
+                    }, 10000);
                 }
                 if (settings.huntandbattle == "true") {
                     setTimeout(() => {
@@ -407,7 +407,7 @@ if (extratokencheck == "true") {
                     {
                         setTimeout(() => {
                             buy_ring(maintoken, "StartUp", "Main Token", mainchannelid);
-                        }, 3000);
+                        }, 10000);
                     }
                     if (settings.huntandbattle == "true") {
                         setTimeout(() => {
@@ -472,7 +472,7 @@ if (settings.buyring == "true") {
         if (global.etoken) {
             buy_ring(extratoken, "Extra Token", extrachannelid);
         }
-    }, 3000);
+    }, 10000);
 }
 //--------------------------HUNT BATTLE-------------------------------------------------------//
 setInterval(() => {
@@ -759,7 +759,7 @@ function buy_ring(token, tokentype, channelid) {
                     `${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
                 ) +
                     chalk.magenta(" [" + tokentype + "]") +
-                    chalk.blue(" Buy Ring 💍 ✅")
+                    chalk.blue(" Buy Ring ✅")
             );
         }
     );

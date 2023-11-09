@@ -42,20 +42,20 @@
         },
         "gamble": {
             "coinflip": {
-                "default_amount": 50000,
-                "max_amount": 150000,
+                "default_amount": 150000,
+                "max_amount": 250000,
                 "multipler": 3,
                 "enable": "true", 
                 "amount": "1"
             },
             "slots": {
                 "enable": "true",
-                "amount": "25000"
+                "amount": "50000"
             }
         }
     },
     "main": {
-        "token": "NzgxNTE5MjU3MzI5NDY3NDEz.GkscIV.edu6A31puiC15pQMygqeme7RBDwm_HfFS9au_I",
+        "token": "NzgxNTE5MjU3MzI5NDY3NDEz.GFZc5c.-XDzeykWHz52VY_f7QdrY3GTjDpbRYtLpNQqcY",
         "userid": "781519257329467413",
         "channelid": "687321586986123368",
         "owodmchannelid": "828183841402650644",
